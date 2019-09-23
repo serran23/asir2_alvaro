@@ -15,3 +15,9 @@ if(isset($_GET['email'])){
 	<input name="email"/>
 	<button>Suscribirse</button>
 </form>
+
+</br>
+<a href="http://192.168.0.46/asir2_xanders/index.php" target=_blank>-Xanders-</a>
+</br>
+<a href="http://192.168.0.46/asir2_xanders/index.php" target=_blank>-De la Sen-</a>
+</br>
