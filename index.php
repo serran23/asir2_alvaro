@@ -19,5 +19,5 @@ if(isset($_GET['email'])){
 </br>
 <a href="http://192.168.0.46/asir2_xanders/index.php" target=_blank>-Xanders-</a>
 </br>
-<a href="http://192.168.0.46/asir2_xanders/index.php" target=_blank>-De la Sen-</a>
+<a href="http://192.168.0.50/Formulario/formulario1.php" target=_blank>-De la Sen-</a>
 </br>
