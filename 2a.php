@@ -1,7 +1,7 @@
 <?php
 
-$a='256';
-$b='128';
+$a=256;
+$b=128;
 
 echo 'Primer número='.$a;
 echo '</br>';
