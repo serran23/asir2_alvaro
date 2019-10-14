@@ -14,12 +14,14 @@
 </form>
 
 <?php
-if(isset($a1, $a2, $a3)){
-	echo 'Ángulo 1: '.$_GET['angulo1'].'</br>';
-	echo 'Ángulo 2: '.$_GET['angulo2'].'</br>';
-	echo 'Ángulo 3: '.$_GET['angulo3'].'</br>';
-	echo '</br>';
-}else
+if(isset($_GET['angulo1'],$_GET['angulo1'],$_GET['angulo1'])){
+	if(is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo1']) && ($_GET['angulo1'])>0 && ($_GET['angulo1'])>0 && ($_GET['angulo1'])>0){
+		echo 'Ángulo 1: '.$_GET['angulo1'].'</br>';
+		echo 'Ángulo 2: '.$_GET['angulo2'].'</br>';
+		echo 'Ángulo 3: '.$_GET['angulo3'].'</br>';
+		echo '</br>';
+}
+}
 ?>
 
 <form>
@@ -55,8 +57,7 @@ if(is_numeric($a1) && is_numeric($a2) && is_numeric($a3) && ($a1)>0 && ($a2)>0 &
 			}else
 				echo 'Triángulo escaleno.';
 		}
-	}else
-		echo 'Introduce valores numéricos positivos, por favor.';
+	}
 }
 if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
 	echo loko($_GET['angulo1'],$_GET['angulo2'],$_GET['angulo3'],1,1,1);
