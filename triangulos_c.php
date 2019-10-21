@@ -31,35 +31,35 @@ if(isset($_GET['angulo1'],$_GET['angulo1'],$_GET['angulo1'])){
 </form>
 
 <?php
-function loko($a1,$a2,$a3,$l1,$l2,$l3){
-	if(is_numeric($a1) && is_numeric($a2) && is_numeric($a3) && ($a1)>0 && ($a2)>0 && ($a3)>0){
-		if((($a1)+($a2)+($a3))==180){
-			if($a1==90 || $a2==90 || $a3==90){
-				echo 'Triángulo rectángulo.';
-			}elseif($a1>90 || $a2>90 || $a3>90){
-				echo 'Triángulo obtusángulo.';
-			}else
-				echo 'Triángulo acutángulo.';
-		}else
-			echo 'Los ángulos de un triángulo han de sumar 180º, revisa que has metido.';
-	}else
-		echo 'Introduce valores numéricos positivos, por favor.';
-
-echo '</br>';
-echo '</br>';
-
-if(is_numeric($a1) && is_numeric($a2) && is_numeric($a3) && ($a1)>0 && ($a2)>0 && ($a3)>0){
-		if((($a1)+($a2)+($a3))==180){
-			if($a1==$a2 && $a1==$a3){
-				echo 'Triángulo equilátero.';
-			}elseif($a1==$a2 || $a1==$a3 || $a2==$a3){
-				echo 'Triángulo isósceles.';
-			}else
-				echo 'Triángulo escaleno.';
-		}
-	}
-}
 if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
-	echo loko($_GET['angulo1'],$_GET['angulo2'],$_GET['angulo3'],1,1,1);
-}
+	if(is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo2']) && is_numeric($_GET['angulo3']) && ($_GET['angulo1'])>0 && ($_GET['angulo2'])>0 && ($_GET['angulo3'])>0){
+		function lados(){
+			if($_GET['angulo1']==$_GET['angulo2'] && $_GET['angulo1']==$_GET['angulo3']){
+				$r='equilátero';
+			}elseif($_GET['angulo1']==$_GET['angulo2'] || $_GET['angulo1']==$_GET['angulo3'] || $_GET['angulo2']==$_GET['angulo3']){
+				$r='isósceles';
+			}else
+				$r='escaleno';
+			return $r;
+		}
+		
+		
+		
+		function angulos(){
+			if($_GET['angulo1']==90 || $_GET['angulo2']==90 || $_GET['angulo3']==90){
+				$r='rectángulo';
+			}elseif($_GET['angulo1']>90 || $_GET['angulo2']>90 || $_GET['angulo3']>90){
+				$r='obtusángulo';
+			}else
+				$r='acutángulo';
+			return $r;
+			}
+			
+			echo 'Es un triángulo '.lados().' y '.angulos().'.';
+		
+	}else
+		echo  'Introduce valores numéricos, por favor.';
+}else
+	echo 'Introduce la medida de los lados del triángulo.';
+
 ?>

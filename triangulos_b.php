@@ -17,12 +17,16 @@
 if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
 	if(is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo2']) && is_numeric($_GET['angulo3']) && ($_GET['angulo1'])>0 && ($_GET['angulo2'])>0 && ($_GET['angulo3'])>0){
 		if((($_GET['angulo1'])+($_GET['angulo2'])+($_GET['angulo3']))==180){
+			function angulos(){
 			if($_GET['angulo1']==90 || $_GET['angulo2']==90 || $_GET['angulo3']==90){
-				echo 'Triángulo rectángulo.';
+				$r='Triángulo rectángulo.';
 			}elseif($_GET['angulo1']>90 || $_GET['angulo2']>90 || $_GET['angulo3']>90){
-				echo 'Triángulo obtusángulo.';
+				$r='Triángulo obtusángulo.';
 			}else
-				echo 'Triángulo acutángulo.';
+				$r='Triángulo acutángulo.';
+			return $r;
+			}
+			echo angulos();
 		}else
 			echo 'Los ángulos de un triángulo han de sumar 180º, revisa que has metido.';
 	}else

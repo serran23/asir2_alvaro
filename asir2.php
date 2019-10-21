@@ -11,6 +11,6 @@
 
 <?php
 $f=fopen('visitas.txt','a');
-fwrite($f,$_SERVER['REMOTE_ADDR']."\r\n");
+fwrite($f,$_SERVER['REMOTE_ADDR'].' '.date("h:i:sa")."\r\n");
 fclose($f)
 ?>

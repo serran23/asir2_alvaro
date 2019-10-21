@@ -28,8 +28,8 @@
 </form>
 
 <?php
-if(($_GET['angulo1']!='') && ($_GET['angulo2']!='') && ($_GET['angulo3']!='') && ($_GET['lado1']!='') && ($_GET['lado2']!='') && ($_GET['lado3']!='')){
-	if(isset($_GET['angulo1'],$_GET['angulo2'],$_GET['angulo3'],$_GET['lado1'],$_GET['lado2'],$_GET['lado3'])){
+if(isset($_GET['angulo1'],$_GET['angulo2'],$_GET['angulo3'],$_GET['lado1'],$_GET['lado2'],$_GET['lado3'])){
+	if(($_GET['angulo1']!='') && ($_GET['angulo2']!='') && ($_GET['angulo3']!='') && ($_GET['lado1']!='') && ($_GET['lado2']!='') && ($_GET['lado3']!='')){
 		if(is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo2']) && is_numeric($_GET['angulo3']) && ($_GET['lado1'])>0 && ($_GET['lado2'])>0 && ($_GET['lado3'])>0){
 			
 			function triangulo($t){
@@ -82,9 +82,10 @@ if(($_GET['angulo1']!='') && ($_GET['angulo2']!='') && ($_GET['angulo3']!='') &&
 		]);
 
 
+			}else
+				echo 'Mete números positivos, por favor.';
 		}else
-			echo 'Mete números positivos, por favor.';
-	}
-}else 
-	echo 'Mete los números en las cajitas.';
+			echo 'Mete los números en las cajitas.';
+	}else 
+		echo 'Mete los números en las cajitas.';
 ?>
