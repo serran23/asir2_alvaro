@@ -54,7 +54,7 @@ for($i=$start;$i<=$end;$i+=24*60*60){
 		echo '</br>';
 		echo 'Fin del curso escolar';
 		echo '</br>';
-		echo 'Días lectivos: '.$count;
+		echo 'Días totales: '.$count;
 	
 	}
 }
