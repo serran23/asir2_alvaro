@@ -15,6 +15,7 @@ $meses=[
 	'11'=>'Noviembre',
 	'12'=>'Diciembre',
 ];
+$count=0;
 
 for($i=$start;$i<=$end;$i+=24*60*60){
 	
@@ -44,12 +45,16 @@ for($i=$start;$i<=$end;$i+=24*60*60){
 			
 	echo date('Y/m/d', $i);
 	echo '</br>';
+	$count++;
+	
 	
 	if ($i==$end){
 		
 		echo '</br>';
 		echo '</br>';
 		echo 'Fin del curso escolar';
+		echo '</br>';
+		echo 'Días lectivos: '.$count;
 	
 	}
 }
