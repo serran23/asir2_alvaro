@@ -41,4 +41,9 @@ if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
 	
 }else
 	echo 'Introduce la medida de los angulos del triángulo.';
+
+echo '<br><br>Vectores de test:<br><br>';
+echo angulos(45,90,45).' ¿rectángulo?<br/>';
+echo angulos(60,60,60).' ¿acutángulo?<br/>';
+echo angulos(100,40,40).' ¿obtusángulo?<br/>';
 ?>

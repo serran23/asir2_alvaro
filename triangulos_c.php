@@ -70,11 +70,20 @@ function angulos($A,$B,$C){
 	
 }
 
+
+
 if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
 	
 	echo triangulo(1,1,1,($_GET['angulo1']),($_GET['angulo2']),($_GET['angulo3']));
 	
 }else
 	echo 'Introduce la medida de los angulos del triángulo.';
+
+echo '<br><br>Vectores de test:<br><br>';
+echo triangulo(1,sqrt(2),1,45,90,45).' ¿rectángulo-isósceles?<br/>';
+echo triangulo(1,sqrt(2),1,45,45,90).' ¿rectángulo-isósceles?<br/>';
+echo triangulo(1,sqrt(2),1,90,45,45).' ¿rectángulo-isósceles?<br/>';
+echo triangulo(1,1,1,60,60,60).' ¿acutángulo-equilátero?<br/>';
+echo triangulo(1,1,1,100,40,40).' ¿obtusángulo-isósceles?<br/>';
 
 ?>

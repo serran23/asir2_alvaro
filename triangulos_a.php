@@ -32,8 +32,18 @@ function lados($a,$b,$c){
 
 }
 
+
 if(isset($_GET['lado1'], $_GET['lado2'], $_GET['lado3'])){
 	echo lados($_GET['lado1'], $_GET['lado2'], $_GET['lado3']);
 }else
 	echo 'Introduce la medida de los lados del triángulo.';
+
+
+
+echo '<br><br>Vectores de test:<br><br>';
+echo lados(1,1,1).' ¿equilátero?<br/>';
+echo lados(1,2,1).' ¿isósceles?<br/>';
+echo lados(1,2,3).' ¿escaleno?<br/>';
+
+
 ?>
