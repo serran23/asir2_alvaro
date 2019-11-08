@@ -13,17 +13,6 @@
 	</br>
 </form>
 
-<?php
-if(isset($_GET['angulo1'],$_GET['angulo1'],$_GET['angulo1'])){
-	if(is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo1']) && ($_GET['angulo1'])>0 && ($_GET['angulo1'])>0 && ($_GET['angulo1'])>0){
-		echo 'Ángulo 1: '.$_GET['angulo1'].'</br>';
-		echo 'Ángulo 2: '.$_GET['angulo2'].'</br>';
-		echo 'Ángulo 3: '.$_GET['angulo3'].'</br>';
-		echo '</br>';
-}
-}
-?>
-
 <form>
 	<button href="http://localhost/asir2_alvaro/triangulos_c.php">Poner a 0 los valores.</button>
 	</br>
@@ -31,35 +20,61 @@ if(isset($_GET['angulo1'],$_GET['angulo1'],$_GET['angulo1'])){
 </form>
 
 <?php
-if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
-	if(is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo2']) && is_numeric($_GET['angulo3']) && ($_GET['angulo1'])>0 && ($_GET['angulo2'])>0 && ($_GET['angulo3'])>0){
-		function lados(){
-			if($_GET['angulo1']==$_GET['angulo2'] && $_GET['angulo1']==$_GET['angulo3']){
-				$r='equilátero';
-			}elseif($_GET['angulo1']==$_GET['angulo2'] || $_GET['angulo1']==$_GET['angulo3'] || $_GET['angulo2']==$_GET['angulo3']){
-				$r='isósceles';
+
+function triangulo($a,$b,$c,$A,$B,$C){
+	
+	$a=$A;
+	$b=$B;
+	$c=$C;
+	
+	echo lados($a,$b,$c);
+	echo angulos($A,$B,$C);
+	
+}
+
+function lados($a,$b,$c){
+	
+
+
+
+	if(is_numeric($a) && is_numeric($b) && is_numeric($c) && ($a)>0 && ($b)>0 && ($c)>0){
+
+			if($a==$b && $a==$c){
+				$r='Triángulo equilátero ';
+			}elseif($a==$b || $a==$c || $b==$c){
+				$r='Triángulo isósceles ';
 			}else
-				$r='escaleno';
+				$r='Triángulo escaleno ';
 			return $r;
-		}
-		
-		
-		
-		function angulos(){
-			if($_GET['angulo1']==90 || $_GET['angulo2']==90 || $_GET['angulo3']==90){
-				$r='rectángulo';
-			}elseif($_GET['angulo1']>90 || $_GET['angulo2']>90 || $_GET['angulo3']>90){
-				$r='obtusángulo';
+				
+	}
+
+
+}
+
+function angulos($A,$B,$C){
+	if(is_numeric($A) && is_numeric($B) && is_numeric($C) && ($A)>0 && ($B)>0 && ($C)){
+		if((($A)+($B)+($C))==180){
+			if($A==90 || $B==90 || $C==90){
+				$r='y rectángulo.';
+			}elseif($A>90 || $B>90 || $C>90){
+				$r='y obtusángulo.';
 			}else
-				$r='acutángulo';
+				$r='y acutángulo.';
 			return $r;
-			}
 			
-			echo 'Es un triángulo '.lados().' y '.angulos().'.';
-		
+		}else
+			echo 'Los ángulos de un triángulo han de sumar 180º, revisa que has metido.';
 	}else
-		echo  'Introduce valores numéricos, por favor.';
+		echo 'Introduce valores numéricos, por favor.';
+	
+}
+
+if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
+	
+	echo triangulo(1,1,1,($_GET['angulo1']),($_GET['angulo2']),($_GET['angulo3']));
+	
 }else
-	echo 'Introduce la medida de los lados del triángulo.';
+	echo 'Introduce la medida de los angulos del triángulo.';
 
 ?>

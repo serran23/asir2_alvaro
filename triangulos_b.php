@@ -14,23 +14,31 @@
 </form>
 
 <?php
-if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
-	if(is_numeric($_GET['angulo1']) && is_numeric($_GET['angulo2']) && is_numeric($_GET['angulo3']) && ($_GET['angulo1'])>0 && ($_GET['angulo2'])>0 && ($_GET['angulo3'])>0){
-		if((($_GET['angulo1'])+($_GET['angulo2'])+($_GET['angulo3']))==180){
-			function angulos(){
-			if($_GET['angulo1']==90 || $_GET['angulo2']==90 || $_GET['angulo3']==90){
+
+
+function angulos($A,$B,$C){
+	if(is_numeric($A) && is_numeric($B) && is_numeric($C) && ($A)>0 && ($B)>0 && ($C)){
+		if((($A)+($B)+($C))==180){
+			if($A==90 || $B==90 || $C==90){
 				$r='Triángulo rectángulo.';
-			}elseif($_GET['angulo1']>90 || $_GET['angulo2']>90 || $_GET['angulo3']>90){
+			}elseif($A>90 || $B>90 || $C>90){
 				$r='Triángulo obtusángulo.';
 			}else
 				$r='Triángulo acutángulo.';
 			return $r;
-			}
-			echo angulos();
+			
 		}else
 			echo 'Los ángulos de un triángulo han de sumar 180º, revisa que has metido.';
 	}else
 		echo 'Introduce valores numéricos, por favor.';
+	
+}
+
+
+if(isset($_GET['angulo1'], $_GET['angulo2'], $_GET['angulo3'])){
+	
+	echo angulos(($_GET['angulo1']),($_GET['angulo2']),($_GET['angulo3']));
+	
 }else
 	echo 'Introduce la medida de los angulos del triángulo.';
 ?>
