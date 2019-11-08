@@ -25,7 +25,7 @@
 		
 		<form action="ejemplo.php" method="get">
 		<p>Dato importante 1: <input type="text" name="nombre" size="40"></p>
-		<p>Dato importante 2: <input type="number" name="nacido" min="1900"></p>
+		<p>Dato importante 2: <input type="text" name="nacido" min="1900"></p>
 		<p>Variable vital:
 			</br>
 			<input type="radio" name="hm" value="h"> Dato no tan importante, pero casi 1
@@ -37,45 +37,67 @@
 		  </p>
 		</form>
 		
-		<table class="egt">
+		<table class="egt" border=1>
 
 		  <tr>
 
-			<th>Hoy</th>
+			<th>Provincia</th>
 
-			<th>Mañana</th>
+			<th>Prov. de...</th>
 
-			<th>Miércoles</th>
 
 		  </tr>
 
 		  <tr>
 
-			<td>Soleado</td>
+			<td>La Coruña</td>
 
-			<td>Mayormente soleado</td>
+			<td>Galicia</td>
 
-			<td>Parcialmente nublado</td>
-
-		  </tr>
-
-		  <tr>
-
-			<td>19°C</td>
-
-			<td>17°C</td>
-
-			<td>12°C</td>
 
 		  </tr>
 
 		  <tr>
 
-			<td>E 13 km/h</td>
+			<td>Lugo</td>
 
-			<td>E 11 km/h</td>
+			<td>Galicia</td>
 
-			<td>S 16 km/h</td>
+		  </tr>
+
+		  <tr>
+
+			<td>Asturias</td>
+
+			<td>Asturias</td>
+
+
+		  </tr>
+		  
+		  <tr>
+
+			<td>Cantabria</td>
+
+			<td>Cantabria</td>
+
+
+		  </tr>		  
+		  
+		  <tr>
+
+			<td>Vizcaya</td>
+
+			<td>País Vasco</td>
+
+
+		  </tr>
+		  
+		  <tr>
+
+			<td>Gipuzcua</td>
+
+			<td>País Vasco</td>
+
 
 		  </tr>
 
