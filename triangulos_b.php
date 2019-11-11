@@ -25,13 +25,13 @@ function angulos($A,$B,$C){
 				$r='Triángulo obtusángulo.';
 			}else
 				$r='Triángulo acutángulo.';
-			return $r;
+
 			
 		}else
-			echo 'Los ángulos de un triángulo han de sumar 180º, revisa que has metido.';
+			$r= 'Los ángulos de un triángulo han de sumar 180º, revisa que has metido.';
 	}else
-		echo 'Introduce valores numéricos, por favor.';
-	
+		$r= 'Introduce valores numéricos, por favor.';
+	return $r;
 }
 
 

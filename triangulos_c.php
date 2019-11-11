@@ -23,12 +23,7 @@
 
 function triangulo($a,$b,$c,$A,$B,$C){
 	
-	$a=$A;
-	$b=$B;
-	$c=$C;
-	
-	echo lados($a,$b,$c);
-	echo angulos($A,$B,$C);
+	return lados($A,$B,$C).angulos($A,$B,$C);
 	
 }
 
@@ -38,7 +33,7 @@ function lados($a,$b,$c){
 
 
 	if(is_numeric($a) && is_numeric($b) && is_numeric($c) && ($a)>0 && ($b)>0 && ($c)>0){
-
+		if((($a)+($b)+($c))==180){
 			if($a==$b && $a==$c){
 				$r='Triángulo equilátero ';
 			}elseif($a==$b || $a==$c || $b==$c){
@@ -46,7 +41,7 @@ function lados($a,$b,$c){
 			}else
 				$r='Triángulo escaleno ';
 			return $r;
-				
+		}
 	}
 
 
@@ -61,13 +56,13 @@ function angulos($A,$B,$C){
 				$r='y obtusángulo.';
 			}else
 				$r='y acutángulo.';
-			return $r;
+
 			
 		}else
-			echo 'Los ángulos de un triángulo han de sumar 180º, revisa que has metido.';
+			$r= 'Los ángulos de un triángulo han de sumar 180º, revisa que has metido.';
 	}else
-		echo 'Introduce valores numéricos, por favor.';
-	
+		$r= 'Introduce valores numéricos, por favor.';
+	return $r;
 }
 
 

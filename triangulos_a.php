@@ -25,11 +25,12 @@ function lados($a,$b,$c){
 				$r='Triángulo isósceles.';
 			}else
 				$r='Triángulo escaleno.';
-			return $r;
+			
 				
 	}else
-		echo  'Introduce valores numéricos, por favor.';
+		$r= 'Introduce valores numéricos, por favor.';
 
+	return $r;
 }
 
 
