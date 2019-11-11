@@ -4,11 +4,11 @@
 	<title>Página rándom</title>
 </head>
 	
-<body bgcolor="#afafaf">
-<center>
-	
-	<table width="5" height="3"><tr><td>
-		
+<body bgcolor="#afafaf" >
+
+	<center>
+	<table width="80%" height="100%" bgcolor="#blue"><tr><td>
+		<center>
 		<h1>Título 1</h1>
 		<h1>Título 2</h1>
 		<h2>Segundo título 1</h2>
@@ -19,7 +19,7 @@
 		<h2>Segundo título 3</h2>
 		<h3>Casi ni título, pero si 2</h3>
 		<h4>fdgfdgsdfsdfsfsd...</h4>
-		<img src="vivafc.jpg" width="400"  height="300"></img>
+		<img src="vivafc.jpg" width="400"  height="300"/>
 		</br>
 		</br>
 		<p><font size=4 color="green" face="Comic Sans MS,arial,verdana">Texto random para <u><b>probar que tal van las distintas movidas que tenemos que usar</b></u> y que no se hacer ninguna porque convalidar esta muy chulo pero igual después de 8 años te acuerdas de como buscar las cosas en google y poco, pero yo estoy bien, todo bien, todo correcto, en el proyecto final de curso me van a faltar vírgenes a las que rezar, pero todo biend no pasa onadsd no estoy teniendaoo un ataque socncororo me mueoreoooo!! </br><u><b>Jaja era bromuro dont worry el psicologo y la policía dicen que estoy bien :)</b></u></font></p>
@@ -28,7 +28,7 @@
 		</br>
 		</br>
 		
-		<form action="cosis.txt" method="get">
+		<form>
 		<p>Dato importante 1: <input type="text" name="nombre" size="40"></p>
 		<p>Dato importante 2: <input type="text" name="nacido" min="1900"></p>
 		<p>Variable vital:
@@ -107,7 +107,7 @@
 		  </tr>
 
 		</table>
-		
+		</center>
 	</table></tr></td>
 </center>
 </body>
