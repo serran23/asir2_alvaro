@@ -37,8 +37,8 @@
 			<input type="radio" name="hm" value="m"/> Dato no tan importante, pero casi 2
 		 <p/>
 		 <p>
-			<input type="submit" value="Enviar">
-			<input type="reset" value="Borrar">
+			<input type="submit" value="Enviar"/>
+			<input type="reset" value="Borrar"/>
 		  <p/>
 		</form>
 		
