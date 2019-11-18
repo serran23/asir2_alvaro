@@ -22,7 +22,7 @@
 		<img src="vivafc.jpg" width="400"  height="300"/>
 		<br/>
 		<br/>
-		<p><font size=4 color="green" face="Comic Sans MS,arial,verdana">Texto random para <u><b>probar que tal van las distintas movidas que tenemos que usar</b></u> y que no se hacer ninguna porque convalidar esta muy chulo pero igual después de 8 años te acuerdas de como buscar las cosas en google y poco, pero yo estoy bien, todo bien, todo correcto, en el proyecto final de curso me van a faltar vírgenes a las que rezar, pero todo biend no pasa onadsd no estoy teniendaoo un ataque socncororo me mueoreoooo!! <br/><u><b>Jaja era bromuro dont worry el psicologo y la policía dicen que estoy bien :)</b></u></font><p/>
+		<p><font size=4 color="green" face="Comic Sans MS,arial,verdana">Texto random para <u><b>probar que tal van las distintas movidas que tenemos que usar</b></u> y que no se hacer ninguna porque convalidar esta muy chulo pero igual después de 8 años te acuerdas de como buscar las cosas en google y poco, pero yo estoy bien, todo bien, todo correcto, en el proyecto final de curso me van a faltar vírgenes a las que rezar, pero todo biend no pasa onadsd no estoy teniendaoo un ataque socncororo me mueoreoooo!! <br/><u><b>Jaja era bromuro dont worry el psicologo y la policía dicen que estoy bien :)</b></u></font></p>
 		<form input submit></form>
 		<table tr td border 2 cols></table>
 		<br/>
@@ -35,11 +35,11 @@
 			<br/>
 			<input type="radio" name="hm" value="h"/> Dato no tan importante, pero casi 1
 			<input type="radio" name="hm" value="m"/> Dato no tan importante, pero casi 2
-		 <p/>
+		 </p>
 		 <p>
 			<input type="submit" value="Enviar"/>
 			<input type="reset" value="Borrar"/>
-		  <p/>
+		  </p>
 		</form>
 		
 		<table class="egt" border=1>
