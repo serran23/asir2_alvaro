@@ -11,19 +11,18 @@
 		<center>
 		<h1>Título 1</h1>
 		<h1>Título 2</h1>
-		<h2>Segundo título 1</h2>
-		<h2>Segundo título 2</h2>
-		<h3>Casi ni título, pero si 1</h3>
-		<h4>plsafoasfwofa...</h4>
+		<h2>Título 2.1</h2>
+		<h2>Título 2.2</h2>
+		<h3>Título 2.2.1</h3>
+		<h4>Título 2.2.1.1</h4>
 		<h1>Título 3</h1>
-		<h2>Segundo título 3</h2>
-		<h3>Casi ni título, pero si 2</h3>
-		<h4>fdgfdgsdfsdfsfsd...</h4>
+		<h2>Título 3.1</h2>
+		<h3>Título 3.1.1</h3>
+		<h4>Título 3.1.1.1</h4>
 		<img src="vivafc.jpg" width="400"  height="300"/>
 		<br/>
 		<br/>
 		<p><font size=4 color="green" face="Comic Sans MS,arial,verdana">Texto random para <u><b>probar que tal van las distintas movidas que tenemos que usar</b></u> y que no se hacer ninguna porque convalidar esta muy chulo pero igual después de 8 años te acuerdas de como buscar las cosas en google y poco, pero yo estoy bien, todo bien, todo correcto, en el proyecto final de curso me van a faltar vírgenes a las que rezar, pero todo biend no pasa onadsd no estoy teniendaoo un ataque socncororo me mueoreoooo!! <br/><u><b>Jaja era bromuro dont worry el psicologo y la policía dicen que estoy bien :)</b></u></font></p>
-		<form input submit></form>
 		<table tr td border 2 cols></table>
 		<br/>
 		<br/>
