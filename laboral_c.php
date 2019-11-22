@@ -53,7 +53,7 @@ for($i=$start;$i<=$end;$i+=24*60*60){
 	}
 	
 
-	if (!IN_ARRAY(date('Y/m/d', $i), $finde) || !IN_ARRAY(date('Y/m/d', $i), $festivos)){
+	if (!IN_ARRAY(date('Y/m/d', $i), $finde) and !IN_ARRAY(date('Y-m-d', $i), $festivos)){
 		echo date('Y/m/d', $i);
 		echo '</br>';
 		$count++;
