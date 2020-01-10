@@ -64,7 +64,7 @@ function dandolotodo($numeros){
 
 	echo '</br>';
 	echo '</br>';
-    //Vamos a ir metiendo en la variable html lo que es una tabla en html, línea a línea, para que luego la imprima.
+//Vamos a ir metiendo en la variable html lo que es una tabla en html, línea a línea, para que luego la imprima.
     $html = '<table border=1>';
     // Aquí creamos la fila de cabecera (los numericos de orden)
     $html .= '<tr>';
@@ -73,7 +73,7 @@ function dandolotodo($numeros){
         }
     $html .= '</tr>';
 
-    //Y aquí metemos cada valor del array en la celda correspondiente de la tabla. Como ya están ordenados, básicamente vamos rellenando la tabla de menor a mayor, y nos van a coincidir
+//Y aquí metemos cada valor del array en la celda correspondiente de la tabla. Como ya están ordenados, básicamente vamos rellenando la tabla de menor a mayor, y nos van a coincidir
 
         $html .= '<tr>';
         foreach($numeros as $value){
