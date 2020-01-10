@@ -42,7 +42,6 @@ function ordena(){
 /*Ordenamos el array otra vez*/
 
 	echo 'Números ordenados: ';
-
 	for($i = 0; $i<(count($numeros)) ; $i++){
 	
 	echo $numeros[$i];
@@ -54,9 +53,40 @@ function ordena(){
 		echo ', ';
 		}
 	}
-	
-/*Lo mismo de antes, pero ahora enseñamos los números ordenados*/
 
+	echo dandolotodo($numeros);
+}
+//Y lo imprimimos otra vez, pero ahora ordenado.
+
+function dandolotodo($numeros){
+
+//Otra función fruto del aburrimiento, para mostrar los números ordenados en una tabla
+
+	echo '</br>';
+	echo '</br>';
+    //Vamos a ir metiendo en la variable html lo que es una tabla en html, línea a línea, para que luego la imprima.
+    $html = '<table border=1>';
+    // Aquí creamos la fila de cabecera (los numericos de orden)
+    $html .= '<tr>';
+    foreach($numeros as $key=>$value){
+            $html .= '<th>' . htmlspecialchars($key+1).'º' . '</th>';
+        }
+    $html .= '</tr>';
+
+    //Y aquí metemos cada valor del array en la celda correspondiente de la tabla. Como ya están ordenados, básicamente vamos rellenando la tabla de menor a mayor, y nos van a coincidir
+
+        $html .= '<tr>';
+        foreach($numeros as $value){
+            $html .= '<td>' . htmlspecialchars($value) . '</td>';
+        }
+        $html .= '</tr>';
+
+
+    $html .= '</table>';
+	
+//Se acabó, ahora metemos la tabla en el return y a llamarlo dentro de la otra función. Easy.
+
+    return $html;
 }
 
 
