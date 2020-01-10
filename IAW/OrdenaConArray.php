@@ -11,7 +11,7 @@
 
 <?php
 
-if($_GET['boton']){
+if(isset($_GET['boton'])){
 	ordena();
 }
 
