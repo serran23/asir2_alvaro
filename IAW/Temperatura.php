@@ -26,8 +26,8 @@ $c=NULL;
 $f=NULL;
 $k=NULL;
 
-//Le metemos un filtro que detecte si ya hay algún valor metido, básicamente para que cuando arranquemos la página, si aún no hay nada metido, nos meta el mensaje de introduce el numero y selecciona la unidad.
-if(isset($_GET['numerito'])){
+//Le metemos un filtro que detecte si ya hay algún valor metido, básicamente para que cuando arranquemos la página, si aún no hay nada metido, nos meta el mensaje de introduce el numero y selecciona la unidad. De paso le metemos el filtro de que solo acepte números.
+if(isset($_GET['numerito']) && is_numeric($_GET['numerito'])){
 //Hacemos un switch que nos compare el valor seleccionado del menú con las 3 posibles respuestas.
 	switch ($_GET['menu']){
 		
