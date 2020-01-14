@@ -28,7 +28,7 @@
 </form>
 
 
-<!--Formulario, se meten los valores con los que trabajaremos, tiene cuatro cajitas, un botón para mandar los datos y otro para resetearlos. Lo de siempre, vaya.-->
+<!--Formulario, 4 cajitas para meter númeors, 1 botón para lanzarlos, otro para borrar los números de las cajitas y otro para resetear la página--!>
 
 <?php
 if(isset($_GET['numr'])){
@@ -48,25 +48,41 @@ if(isset($_GET['numr'])){
 	
 }
 
-
+//Mensajito de bienvenida habitual para la 1º entrada.
 
 if(isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['num3']) && isset($_GET['num4'])){
 	
-/*Mensajito de bienvenida habitual para la 1º entrada*/
+//Metemos los números en 1 array.
 	
 $numeros=[($_GET['num1']),($_GET['num2']),($_GET['num3']),($_GET['num4'])];
-/*Metemos los números en 1 array*/
+
+//Le decimos al array que se ordene solo, como tiene que ser.
+
 sort($numeros);
-/*Le decimos al array que se ordene solo, como tiene que ser, con el if que fixea el botón de reinicio de la página*/
+//Metemos un filtro para que no nos saque cosas cuando no hayamos metido valores en las cajitas.
+
 if(($_GET['num1']!='') && ($_GET['num2']!='') && ($_GET['num3']!='') && ($_GET['num4']!='')){
+	
+//Imprimimos las 4 posiciones del array*/
 	echo $numeros[0].', '.$numeros[1].', '.$numeros[2].', '.$numeros[3].'.';
 }
-/*E imprimimos las 4 posiciones del array*/
+
 echo '</br>';
 echo '</br>';
 
-/*Otra forma divertida e innecesaria para sacar el resultado (con el fix)*/
+//Otra forma divertida e innecesaria para sacar el resultado (con el fix)*/
 for($i = 0; $i<(count($numeros)) ; $i++){
+	
+//Buclesito para que no se repitan números.
+	$ok=FALSE;
+		do {
+			$a=(random_int(0, 100));
+			if(!IN_ARRAY($a, $numeros)){
+				$numeros[$i]=$a;
+				$ok=TRUE;
+			}
+			
+		} while ($ok!=TRUE);
 	
 	echo $numeros[$i];
 	
