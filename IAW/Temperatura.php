@@ -21,45 +21,42 @@
 
 <?php
 
+//Inicializamos las variables que usaremos para que no llore.
 $c=NULL;
 $f=NULL;
 $k=NULL;
 
-/*Inicializamos las variables que usaremos para que no llore.*/
-
+//Le metemos un filtro que detecte si ya hay algún valor metido, básicamente para que cuando arranquemos la página, si aún no hay nada metido, nos meta el mensaje de introduce el numero y selecciona la unidad.
 if(isset($_GET['numerito'])){
-
-/*Le metemos un filtro que detecte si ya hay algún valor metido, básicamente para que cuando arranquemos la página, si aún no hay nada metido, nos meta el mensaje de introduce el numero y selecciona la unidad.*/
-
+//Hacemos un switch que nos compare el valor seleccionado del menú con las 3 posibles respuestas.
 	switch ($_GET['menu']){
-		case "Celsius":
+		
+//Ojo con hacer operaciones con números decimales, o metes la conversión a float o error party desu.
+		case 0:
 			$c=($_GET['numerito']);
-			$f=($c*9/5)+32;
-			$k=$c+273.15;
+			$f=(floatval($c)*9/5)+32;
+			$k=floatval($c)+273.15;
 			break;
 		
-		case "Farenheit":
+		case 1:
 			$f=($_GET['numerito']);
-			$c=($f-32)*5/9;
-			$k=$c+273.15;
+			$c=(floatval($f)-32)*5/9;
+			$k=floatval($c)+273.15;
 			break;
-
-		case "Kelvin":
+			
+		case 2:
 			$k=($_GET['numerito']);
-			$c=$k-273.15;
-			$f=($c*9/5)+32;
+			$c=floatval($k)-(273.15);
+			$f=(floatval($c)*9/5)+32;
 			break;
-
-/*Hacemos un switch que nos compare el valor seleccionado del menú con las 3 posibles respuestas. En cada case sería bastante mejor llamar a funciones que repetir tantas veces cosas similares, pero es mu tarde y tengo sueño.*/
 
 	}
-	echo $c.' grados celsius, '.$f.' grados farenheit y '.$k.' grados kelvin.';
 	
-/*Imprimimos con el echo los resultados almacenados.*/
+//Imprimimos con el echo los resultados almacenados.
+	echo $c.' grados celsius.</br>'.$f.' grados farenheit.</br>'.$k.' grados kelvin.';
+	
+//Y ya estaría, digo yo.
 	
 }else
 	echo 'Introduce una temperatura y selecciona su unidad.';
-
-
-
 ?>
