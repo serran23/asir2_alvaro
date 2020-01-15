@@ -8,7 +8,7 @@
 	</br>
 	</br>
 	</br>
-	<button>Convertir</button>
+	<button>Dividir</button>
 	<input type="reset" value="Borrar">
 	</br>
 	</br>
@@ -18,12 +18,9 @@
 <!--Formulario, se meten los valores con los que trabajaremos, tiene dos cajitas, un botón para mandar los datos y otro para resetearlos. Inpensable.-->
 
 <?php
-
-
 if(isset($_GET['num1']) && isset($_GET['num2'])){
 	
 /*Mítico if para que nos diga cosas la 1º vez que entremos*/
-
 	$a=($_GET['num1']);
 	$b=($_GET['num2']);
 	
@@ -31,19 +28,14 @@ if(isset($_GET['num1']) && isset($_GET['num2'])){
 	
 	if($a%$b==0){
 		
-		echo 'División exacta, chupi.';
+		echo ($_GET['num1']).'/'.($_GET['num2']).' da '.intdiv(($_GET['num1']),($_GET['num2'])).', sin resto, o sea, división exacta.';
 		
 	}else{
 		
 		$res=$a%$b;
-		echo 'Hay un resto de '.$res.' y tal.';
+		echo ($_GET['num1']).'/'.($_GET['num2']).' da '.intdiv(($_GET['num1']),($_GET['num2'])).', con un resto de '.$res.' y tal.';
 	}
-
 /*Hacemos la operación y según el resultado procedemos: si es par, mensajito y pa casa, si es impar, metemos el resultado en otra variable y se la cantamos por pantalla.*/
-
 }else
 	echo 'Introduce las 2 cifras a comprobar';
-
-
-
 ?>
