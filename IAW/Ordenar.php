@@ -1,34 +1,10 @@
-<form>
-	Primer número 
-	<input name="num1" size="4" /> 
+<form action='Ordenar.php' method='post'>
 	</br>
 	</br>
-	Segundo número 
-	<input name="num2" size="4" /> 
-	</br>
-	</br>
-	Tercer número 
-	<input name="num3" size="4" /> 
-	</br>
-	</br>
-	Cuarto número 
-	<input name="num4" size="4" /> 
-	</br>
-	</br>
-	<input type="submit" name="numr" value="O randomizamos los números">
-	</br>
-	</br>
-	<button>Ordenar</button>
-	<input type="reset" value="Borrar">
-	<button href="http://localhost/asir2_alvaro/IAW/Ordenar.php?">Poner a 0 los valores.</button>
-	</br>
-	</br>
+	<input type="submit" name="numr" value="Otros números random"> 
 	</br>
 	</br>
 </form>
-
-
-<!--Formulario, 4 cajitas para meter númeors, 1 botón para lanzarlos, otro para borrar los números de las cajitas y otro para resetear la página--!>
 
 <?php
 if(isset($_POST['numr'])){

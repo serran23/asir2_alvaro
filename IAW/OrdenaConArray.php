@@ -1,4 +1,4 @@
-<form align="center">
+<form action='OrdenaConArray.php' method='post' align="center">
 	</br>
 	</br>
 	<input type="submit" name="boton" value="Randomize that s..t"> 
@@ -6,12 +6,11 @@
 	</br>
 </form>
 
-
-<!--Me cansé del formulario, y paso de meter 10 cajas para meter uno a uno 10 números. Vamos a generarlos aleatoriamente y luego que se ordenen. El botonsito, para empezar y nada más.-->
+<!--Repito formulario para randomizar otra vez si nos apetece.-->
 
 <?php
 //Aqui le metemos la orden de ejecutar la función ordena cuando le demos al botón
-if(isset($_GET['boton'])){
+if(isset($_POST['boton'])){
 	ordena();
 }
 //Y aquí comienza la magia y nuestra función.
@@ -23,7 +22,7 @@ function ordena(){
 	echo 'Números seleccionados: ';
 	for ($i=1;$i<=10;$i++){
 		
-//Metemos un bonito bucle d-while para que no nos repita números, básicamente se queda generando números hasta que comprueba que el número generado no exista ya en el array. ¿Necesario? Si, totalmente, bueno un poco...No.
+//Metemos un bonito bucle do-while para que no nos repita números, básicamente se queda generando números hasta que comprueba que el número generado no exista ya en el array. ¿Necesario? Si, totalmente, bueno un poco...No.
 		$ok=FALSE;
 		do {
 			$a=(random_int(0, 100));
