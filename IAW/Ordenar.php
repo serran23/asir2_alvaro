@@ -31,40 +31,97 @@
 <!--Formulario, 4 cajitas para meter númeors, 1 botón para lanzarlos, otro para borrar los números de las cajitas y otro para resetear la página--!>
 
 <?php
-if(isset($_GET['numr'])){
+if(isset($_POST['numr'])){
 
 	$a=(random_int(0, 100));
 	$b=(random_int(0, 100));
 	$c=(random_int(0, 100));
 	$d=(random_int(0, 100));
 		
-	$_GET['num1']=$a;
-	$_GET['num2']=$b;
-	$_GET['num3']=$c;
-	$_GET['num4']=$d;
+	$_POST['num1']=$a;
+	$_POST['num2']=$b;
+	$_POST['num3']=$c;
+	$_POST['num4']=$d;
 	
 	
 	echo 'Han salido '.$a.', '.$b.', '.$c.', '.$d.'.</br></br>';
 	
 }
-
-//Mensajito de bienvenida habitual para la 1º entrada.
-
-if(isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['num3']) && isset($_GET['num4'])){
 	
 //Metemos los números en 1 array.
 	
-$numeros=[($_GET['num1']),($_GET['num2']),($_GET['num3']),($_GET['num4'])];
+$numeros=[($_POST['num1']),($_POST['num2']),($_POST['num3']),($_POST['num4'])];
 
 //Le decimos al array que se ordene solo, como tiene que ser.
 
 sort($numeros);
+
+//Pero los creacionistas no nos dejan usar este método, así que vamos hacerlo al modo tradicional.
+
+$num1=($_POST['num1']);
+$num2=($_POST['num2']);
+$num3=($_POST['num3']);
+$num4=($_POST['num4']);
+$num0=0;
+
+if($num3>$num4){
+	
+	$num0=$num3;
+	$num3=$num4;
+	$num4=$num0;
+	
+}
+
+if($num2>$num3){
+	
+	$num0=$num2;
+	$num2=$num3;
+	$num3=$num0;
+	
+}
+
+if($num1>$num2){
+	
+	$num0=$num1;
+	$num1=$num2;
+	$num2=$num0;
+	
+}
+
+if($num3>$num4){
+	
+	$num0=$num3;
+	$num3=$num4;
+	$num4=$num0;
+	
+}
+
+if($num2>$num3){
+	
+	$num0=$num2;
+	$num2=$num3;
+	$num3=$num0;
+	
+}
+
+if($num3>$num4){
+	
+	$num0=$num3;
+	$num3=$num4;
+	$num4=$num0;
+	
+}
+
 //Metemos un filtro para que no nos saque cosas cuando no hayamos metido valores en las cajitas.
 
-if(($_GET['num1']!='') && ($_GET['num2']!='') && ($_GET['num3']!='') && ($_GET['num4']!='')){
+if(($_POST['num1']!='') && ($_POST['num2']!='') && ($_POST['num3']!='') && ($_POST['num4']!='')){
 	
-//Imprimimos las 4 posiciones del array*/
+//Imprimimos las 4 posiciones del array.
 	echo $numeros[0].', '.$numeros[1].', '.$numeros[2].', '.$numeros[3].'.';
+	
+//E imprimimos las variables de la forma arcaica tambien.
+	echo '</br>'.$num1.', '.$num2.', '.$num3.', '.$num4.'.';
+	
 }
 
 echo '</br>';
@@ -86,7 +143,7 @@ for($i = 0; $i<(count($numeros)) ; $i++){
 	
 	echo $numeros[$i];
 	
-	if(($_GET['num1']!='') && ($_GET['num2']!='') && ($_GET['num3']!='') && ($_GET['num4']!='')){
+	if(($_POST['num1']!='') && ($_POST['num2']!='') && ($_POST['num3']!='') && ($_POST['num4']!='')){
 		if($i==(count($numeros)-1)){
 			
 			echo '.';
@@ -95,7 +152,4 @@ for($i = 0; $i<(count($numeros)) ; $i++){
 		}
 	}
 }
-
-}else
-	echo 'Introduce las 4 cifras a ordenar.';
 ?>
