@@ -51,7 +51,7 @@ function ordena(){
 	echo '</br>';
 	
 	sort($numeros);
-	
+
 //Y los vamos cantando con un bonito for.
 	echo 'Números ordenados: ';
 	for($i = 0; $i<(count($numeros)) ; $i++){
@@ -65,9 +65,40 @@ function ordena(){
 		echo ', ';
 		}
 	}
+	
+//Los creacionistas atacan de nuevo. Lo hacemos con 2 for.
+
+for($i=0;$i<(count($numeros));$i++){
+    for($j=0;$j<(count($numeros)-1);$j++)
+    {
+      if($numeros[$j+1]<$numeros[$j])
+      {
+        $aux=$numeros[$j+1];
+        $numeros[$j+1]=$numeros[$j];
+        $numeros[$j]=$aux;
+      }
+     }
+}
+
+//Otro for para imprimir nuestro bonito array creacionista:
+
+echo '</br></br>Números ordenados con bucles variados: ';
+   for($i=0;$i<=(count($numeros)-1);$i++){
+	    echo $numeros[$i];
+	    if($i==(count($numeros)-1)){
+			
+			echo '.';
+		}else{
+			echo ', ';
+			}
+	}
+   
+	
+	
 //Aquí llamamos a una funcion vital y que será del disfrute de todos (sacaremos los resultados en una tabla, wiiiiii)
 	echo dandolotodo($numeros);
 }
+
 
 //La susodicha función.
 function dandolotodo($numeros){
