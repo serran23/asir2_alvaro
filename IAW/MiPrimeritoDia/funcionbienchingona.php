@@ -14,7 +14,7 @@ function fun($maquina ,$usuario, $contraseña, $bbdd, $consulta){
 		
 	}else{
 		
-		if($consulta=!""){
+		if($consulta==""){
 			
 		echo 'Todo correcto, no hay consulta.';			
 			$b=TRUE;
