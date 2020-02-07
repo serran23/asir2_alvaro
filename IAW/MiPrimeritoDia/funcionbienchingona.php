@@ -1,4 +1,4 @@
-﻿﻿<?php
+<?php
 
 function fun($maquina ,$usuario, $contraseña, $bbdd, $consulta){
 	
@@ -13,6 +13,14 @@ function fun($maquina ,$usuario, $contraseña, $bbdd, $consulta){
 
 		
 	}else{
+		
+		if($consulta=!""){
+			
+		echo 'Todo correcto, no hay consulta.';			
+			$b=TRUE;
+			return $b;
+			
+		}else{
 		
 		echo 'Todo correcto, y la consulta da...<br/><br/>';
 		
@@ -56,9 +64,9 @@ function fun($maquina ,$usuario, $contraseña, $bbdd, $consulta){
 		$b=TRUE;
 
 		
-	}
+		}
 	return $b;
+	}
 }
 
 ?>
-
