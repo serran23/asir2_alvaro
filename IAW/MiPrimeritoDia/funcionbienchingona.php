@@ -56,7 +56,15 @@ function fun($maquina ,$usuario, $contraseña, $bbdd, $consulta){
 				} 
 				echo "</tr>";
 			}
-			echo "</table> \n"; 
+			echo "</table> \n
+			﻿<form action='ConectarBBDD.html' method='post'>
+			</br>
+			</br>
+			<button>Otra consulta</button>
+			</br>
+			</br>
+			</form>";
+			
 			
 		}
 
