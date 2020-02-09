@@ -1,7 +1,9 @@
 ﻿<?php
 
 function fun($maquina ,$usuario, $contraseña, $bbdd){
-		
+	
+	
+	
 	$asd=new mysqli ($maquina ,$usuario, $contraseña, $bbdd);
 	
 	if($asd->connect_error){

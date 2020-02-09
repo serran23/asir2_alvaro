@@ -1,7 +1,7 @@
 ﻿<?php 
 
 session_start();
-	
+
 include ("funcionbienchingona.php");
 
 $_SESSION['name']=$_POST['name'];
