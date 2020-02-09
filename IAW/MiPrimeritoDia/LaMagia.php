@@ -10,7 +10,6 @@
 	</br>
 	</br>
 	<button>Consultar</button>
-	<input type="reset" value="Borrar">
 	</br>
 	</br>
 </form>
