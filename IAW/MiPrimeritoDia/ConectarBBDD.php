@@ -12,5 +12,6 @@ $_SESSION['location']=$_POST['location'];
 
 
 $a=fun($_POST['location'], $_POST['name'], $_POST['pass'], $_POST['bd']);
+error_reporting(-1);
 
 ?>
