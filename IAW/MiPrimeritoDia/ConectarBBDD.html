@@ -1,4 +1,9 @@
-﻿﻿<form action='ConectarBBDD.php' method='post'>
+﻿﻿<?php
+
+	session_start();
+	
+?>
+<form action='ConectarBBDD.php' method='post'>
 	Nombre de usuario: 
 	<input name="name" size="20" type="text" required /> 
 	</br>
@@ -15,13 +20,10 @@
 	<input name="location" size="20" value='localhost' required/> 
 	</br>
 	</br>
-	Consulta SQL
-	<input name="sql" size="100" value='SELECT * FROM emple'/> 
-	</br>
-	</br>
 	</br>
 	<button>Conectar</button>
 	<input type="reset" value="Borrar">
 	</br>
 	</br>
 </form>
+
