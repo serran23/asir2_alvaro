@@ -2,27 +2,36 @@
 	session_start();
 	
 ?>
-<form action='ConectarBBDD.php' method='post'>
-	Nombre de usuario: 
-	<input name="name" size="20" type="text" required /> 
-	</br>
-	</br>
-	Contraseña: 
-	<input name="pass" type='password' size="20" /> 
-	</br>
-	</br>
-	Nombre de la base de datos 
-	<input name="bd" size="20" required /> 
-	</br>
-	</br>
-	Equipo al que conectarse (localhost o ip)
-	<input name="location" size="20" value='localhost' required/> 
-	</br>
-	</br>
-	</br>
-	<button>Conectar</button>
-	<input type="reset" value="Borrar">
-	</br>
-	</br>
-</form>
 
+<html>
+
+<head>
+  <title>Dándolo Todo</title>
+  <link rel="stylesheet" href="Waaaaaaa.css">
+</head>
+
+<body>
+	<form action='ConectarBBDD.php' method='post'>
+		Nombre de usuario: 
+		<input name="name" size="20" type="text" required /> 
+		</br>
+		</br>
+		Contraseña: 
+		<input name="pass" type='password' size="20" /> 
+		</br>
+		</br>
+		Nombre de la base de datos 
+		<input name="bd" size="20" required /> 
+		</br>
+		</br>
+		Equipo al que conectarse (localhost o ip)
+		<input name="location" size="20" value='localhost' required/> 
+		</br>
+		</br>
+		</br>
+		<button name='continuar'>Conectar</button>
+		<input name='borrar' type="reset" value="Borrar">
+		</br>
+		</br>
+	</form>
+</body>

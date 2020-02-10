@@ -1,0 +1,2 @@
+SELECT * FROM emple
+SELECT * FROM emple WHERE dept_no=30

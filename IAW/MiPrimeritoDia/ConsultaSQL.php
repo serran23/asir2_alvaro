@@ -24,7 +24,7 @@ function sqlcon($a, $nombre, $contraseña, $basededatos, $servidor){
 
 			$fieldinfo = $resultado->fetch_fields();
 
-			echo "<table border = '1'> \n"; 
+			echo "<table class = 'center'> \n"; 
 			echo "<tr>";
 			foreach ($fieldinfo as $val){ 
 				   echo "<th>".$val -> name."</th>"; 

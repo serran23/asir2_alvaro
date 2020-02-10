@@ -1,34 +1,41 @@
-﻿<form method='post'>
-	Consulta SQL
-	<input name="sql" size="100" value="<?php echo($_POST['sql']);?>" required/> 
-		<input name="consultasql" type="hidden" value="consultasql" /> 
-	</br>
-	</br>
-	</br>
-	<button>Consultar</button>
-	</br>
-	</br>
-</form>
-<form method='post'>
-	<input name="show" type="hidden" value="show" /> 
-	<input name="sql" type="hidden" value="" /> 
-	<button>Mostrar lista de consultas realizadas</button>
-</form>
-<form method='post'>
-	<input name="print" type="hidden" value="print" /> 
-	<input name="sql" type="hidden" value="" /> 
-	<button>Imprimir lista</button>
-	</br>
-	</br>
-</form>
-<form method='post'>
-	<input name="limpiar" type="hidden" value="limpiar" /> 
-	<input name="sql" type="hidden" value="" /> 
-	<button>Limpiar lista</button>
-	</br>
-	</br>
-	</br>
-</form>
+﻿<html>
+
+<head>
+  <title>Dándolo Todo</title>
+  <link rel="stylesheet" href="Wiiiiiii.css">
+</head>
+
+<body>
+
+	<form name='ConsultaSQL' method='post'>
+		<h1 align="center">Consulta SQL</h1>
+		<h2 align="center">Introduzca su consulta SQL:</h2>
+		<input align="center" name="sql" size="100" value="<?php echo($_POST['sql']);?>" required/> 
+			<input name="consultasql" type="hidden" value="consultasql" /> 
+		</br>
+		</br>
+		</br>
+		<button name="Consultar">Consulte señor mono</button>
+		</br>
+		</br>
+	</form>
+	<form name='EnseñaconsultasSQL' method='post'>
+		<input name="show" type="hidden" value="show" /> 
+		<input name="sql" type="hidden" value="" /> 
+		<button name="MostrarLista">Mostrar lista de consultas realizadas</button>
+	</form>
+	<form name='ImprimeconsultasSQL' method='post'>
+		<input name="print" type="hidden" value="print" /> 
+		<input name="sql" type="hidden" value="" /> 
+		<button name="ImprimirLista">Imprimir lista</button>
+	</form>
+	<form name='BorraconsultasSQL' method='post'>
+		<input name="limpiar" type="hidden" value="limpiar" /> 
+		<input name="sql" type="hidden" value="" /> 
+		<button name="LimpiarLista">Limpiar lista</button>
+	</form>
+</body>
+
 
 <?php
 
