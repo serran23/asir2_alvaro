@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 
 <head>
   <title>Dándolo Todo</title>
@@ -73,7 +73,14 @@ if(isset($_POST['print'])){
 
 }
 
-if(isset($_POST['limpiar']) || isset($_POST['start'])){
+if(isset($_POST['limpiar'])){
+	
+	if(!(isset($_SESSION['array']))){
+	
+		$miarray[]=$POST['sql'];
+		$_SESSION['array']=$miarray;
+	
+	}	
 	
 	limpiar($_SESSION['array']);
 }
