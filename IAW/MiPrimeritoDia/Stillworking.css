@@ -4,26 +4,19 @@
 	color: #000000;
 	text-align: left;
 	font-weight: bold;
-	background-image: url("therealhero.jpg");
+	font-size:40px;
+	background-image: url("monkeyworking.jpg");
 	background-repeat:no-repeat;
 	background-size:cover;
 	margin-left: 100px;
     margin-top: 50px;
 }
 
-button[name=continuar] {
+ button[name=volver] {
 	
-	border: 5px solid #61AD30;
-	margin: auto;
+	border: 5px solid #FF0400;
 	position: relative;
-	left: 100px;
-	
-}
-input[name=borrar] {
-	
-	border: 5px solid #FF0000;
-	margin: auto;
-	position: relative;
-	left: 200px;
-	
+	left: 500px;
+	font-size: 24px;
+
 }

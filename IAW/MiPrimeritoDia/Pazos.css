@@ -4,7 +4,7 @@
 	color: #000000;
 	text-align: left;
 	font-weight: bold;
-	background-image: url("theotherrealhero.jpg");
+	background-image: url("locrack.jpg");
 	background-repeat:no-repeat;
 	background-size:cover;
 	margin-left: 100px;
@@ -20,18 +20,6 @@
  button[name=consultas] {
 	
 	border: 5px solid #0008FF;
-
-}
-
- button[name=exportar] {
-	
-	border: 5px solid #FF7000;
-
-}
-
- button[name=salir] {
-	
-	border: 5px solid #E00F0F;
 
 }
 

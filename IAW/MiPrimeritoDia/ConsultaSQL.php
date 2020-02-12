@@ -1,6 +1,6 @@
 ﻿<?php
 
-function sqlcon($a, $nombre, $contraseña, $basededatos, $servidor){
+function sqlcon($nombre, $contraseña, $basededatos, $servidor){
 
 	$name=$nombre;
 	$pass=$contraseña;
@@ -13,13 +13,9 @@ function sqlcon($a, $nombre, $contraseña, $basededatos, $servidor){
 	$sql = $_POST['sql'];
 
 		if (!$resultado = $asd->query($sql)) {
+	
+			echo 'Esa consulta no furula.';
 
-					echo "Lo sentimos, este sitio web está experimentando problemas.";
-					echo "Error: La ejecución de la consulta falló debido a: \n";
-					echo "Query: " . $sql . "\n";
-					echo "Errno: " . $asd->errno . "\n";
-					echo "Error: " . $asd->error . "\n";
-					exit;
 		}else{
 
 			$fieldinfo = $resultado->fetch_fields();

@@ -2,7 +2,7 @@
 
 <head>
   <title>Dándolo Todo</title>
-  <link rel="stylesheet" href="Wiiiiiii.css">
+  <link rel="stylesheet" href="Wiiiiii.css">
 </head>
 
 <body>
@@ -34,6 +34,9 @@
 		<input name="sql" type="hidden" value="" /> 
 		<button name="LimpiarLista">Limpiar lista</button>
 	</form>
+		<form action='Entradaalinfierno.php'>
+		<button name="volver">Volver</button>
+	</form>
 </body>
 
 
@@ -48,7 +51,14 @@ include ("LimpiarLista.php");
 
 if(isset($_POST['consultasql'])){
 	
-	sqlcon($_SESSION['array'], $_SESSION['name'], $_SESSION['pass'], $_SESSION['bd'], $_SESSION['location']);
+	if(!(isset($_SESSION['array']))){
+	
+		$miarray[]=$POST['sql'];
+		$_SESSION['array']=$miarray;
+	
+	}			
+
+	sqlcon($_SESSION['name'], $_SESSION['pass'], $_SESSION['bd'], $_SESSION['location']);
 }
 
 if(isset($_POST['show'])){
@@ -63,7 +73,7 @@ if(isset($_POST['print'])){
 
 }
 
-if(isset($_POST['limpiar'])){
+if(isset($_POST['limpiar']) || isset($_POST['start'])){
 	
 	limpiar($_SESSION['array']);
 }

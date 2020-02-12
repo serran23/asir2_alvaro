@@ -4,26 +4,26 @@
 	color: #000000;
 	text-align: left;
 	font-weight: bold;
-	background-image: url("therealhero.jpg");
+	background-image: url("monkeyisgonnadestroy.jpg");
 	background-repeat:no-repeat;
 	background-size:cover;
 	margin-left: 100px;
     margin-top: 50px;
 }
 
-button[name=continuar] {
+ button[name=keep] {
 	
-	border: 5px solid #61AD30;
-	margin: auto;
+	border: 5px solid #0008FF;
 	position: relative;
-	left: 100px;
-	
+	top:40px;
+
 }
-input[name=borrar] {
+
+ button[name=exit] {
 	
-	border: 5px solid #FF0000;
-	margin: auto;
+	border: 5px solid #E00F0F;
 	position: relative;
-	left: 200px;
-	
+	top:-3px;
+	left: 210px;
+
 }
